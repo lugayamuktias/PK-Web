@@ -72,17 +72,21 @@ function our_team(){
 	$(".members.top170").velocity("transition.slideDownIn",{ stagger: 100 });		
 }
 
-function backToIntro(){
-	$("#menu ul li").fadeOut();
-	$(".container-content").fadeOut();
-	$("#text").velocity({"font-size":"70px", 
-					 	 "top":"50%"
-						 }, {
-							duration: 1000,
-							complete: function(){
-								$("#start").velocity("transition.whirlIn");
-							}
-						});
+// Simpan ukuran font awal
+let initialFontSize = $("#text").css("font-size");
+function backToIntro() {
+    $("#menu ul li").fadeOut();
+    $(".container-content").fadeOut();
+
+    $("#text").velocity({
+        "font-size": initialFontSize, // Gunakan ukuran font awal
+        "top": "50%"
+    }, {
+        duration: 1000,
+        complete: function () {
+            $("#start").velocity("transition.whirlIn");
+        }
+    });
 }
 
 $(document).ready(function(){

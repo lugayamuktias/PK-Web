@@ -11,7 +11,7 @@ html, body{
 }
 
 #intro #text {
-    font-size: 70px;
+    font-size: 70px; /* Ukuran awal untuk desktop */
     font-weight: 800;
     width: 10.5em;
     height: 1.5em;
@@ -133,4 +133,98 @@ h3.title{
 #our_team .members span {
     font-size: 12px;
     font-style: italic;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+    html, body {
+      overflow: auto; /* Hindari overflow tersembunyi */
+    }
+  
+    @media only screen and (max-width: 768px) {
+        #intro #text {
+          font-size: 30px; /* Teks mengecil untuk layar kecil */
+          width: auto; /* Agar tidak terpotong */
+        }
+      
+        #intro #intro-button #start {
+          width: 150px; /* Tombol lebih besar */
+          height: 50px; /* Tombol lebih tinggi */
+          font-size: 18px; /* Ukuran font lebih besar */
+        }
+      }
+
+    #menu ul li a {
+      font-size: 10px; /* Kurangi ukuran font */
+    }
+  
+    #what_we_do img {   
+        margin: 20px auto;
+        border: 10px solid #f1f1f1;
+        border-radius: 3px;
+        width: 100%;
+        max-width: 400px; /* Batas maksimal ukuran gambar */
+        display: block;
+    }
+  
+    h3.title {
+        text-align: center; /* Tengah pada layar */
+        font-size: 3vw; /* Ukuran font dinamis sesuai layar */
+        margin-top: 20px; /* Jarak antara gambar dan judul */
+        text-transform: uppercase;
+        color: white;
+    }
+  
+    #what_we_do div {
+      width: 90%; /* Sesuaikan dengan layar */
+      position: relative;
+      top: 0;
+      left: 0;
+      margin: 20px auto;
+    }
+  
+    #our_team {
+      margin-left: 0;
+    }
+  
+    #our_team .members {
+      float: none; /* Susun vertikal */
+      margin: 20px auto;
+      width: 90%;
+    }
+  
+    #our_team .members img {
+      width: 100%; /* Gambar penuh lebar */
+    }
+  }
+  
+  /* Tablet Styles */
+  @media only screen and (max-width: 1024px) {
+    #intro #text {
+      font-size: 50px;
+    }
+  
+    h3.title {
+        text-align: center; /* Tengah pada layar */
+        font-size: 3vw; /* Ukuran font dinamis sesuai layar */
+        margin-top: 20px; /* Jarak antara gambar dan judul */
+        text-transform: uppercase;
+        color: white;
+    }
+  
+    #what_we_do div {
+      width: 80%;
+    }
+  }
+  /* Responsif untuk layar sangat kecil (ponsel) */
+@media only screen and (max-width: 480px) {
+  #intro #text {
+    font-size: 20px; /* Teks lebih kecil lagi */
+  }
+
+  #intro #intro-button #start {
+    width: 180px; /* Tombol lebih besar untuk kenyamanan pengguna */
+    height: 60px;
+    font-size: 20px;
+  }
 }
